@@ -22,7 +22,7 @@ method: 'POST',
 uri: 'https://saveig.app/api/ajaxSearch',
 headers: headers,
 formData: {
-q: res.query.url
+q: req.query.url
 }
 }
 try {
