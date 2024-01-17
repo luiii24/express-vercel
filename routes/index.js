@@ -1,12 +1,13 @@
 const { Router } = require('express');
 const { SuccessResponseObject } = require('../common/http');
 const demo = require('./demo.route');
-const cloudscraper = require('cloudscraper')
+//const cloudscraper = require('cloudscraper')
 const r = Router();
 
 r.use('/demo', demo);
 
 r.get('/api/ig', (req, res) => {
+let cloudscraper = require('cloudscraper')
 if (!req.query.url) return res.send('url nya ?')
 url_dl = [];
 let headers = {
