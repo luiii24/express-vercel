@@ -29,7 +29,7 @@ try {
 //ch = require('cheerio').load(JSON.parse(await cloudscraper(options)).data);
 //ch('.download-items__btn').each(function(a,b) { url_dl.push(ch(b).find('a').attr('href'))})
 //return res.json(url_dl);
-return res.send(await cloudscraper(options))
+return res.send(JSON.stringify(await cloudscraper(options)))
 } catch { return res.send('terjadi kesalahan, harap ulangi beberapa saat lagi...')}
 })
 r.get('/', (req, res) => res.json(new SuccessResponseObject('express vercel boiler plate')));
